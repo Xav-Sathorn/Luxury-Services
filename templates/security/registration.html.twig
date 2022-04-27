@@ -1,0 +1,54 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<h1>Inscrivez-vous!</h1>
+
+	{{form_start(form)}}
+	{{form_row(form.userGender, {'label': 'Genre', 'attr':
+    {'placeholder': 'Spécifiez votre genre'}})}}
+	{{form_row(form.userFirstName, {'label': 'Prénom', 'attr':
+    {'placeholder': 'Prénom de l\'utilisateur...'}})}}
+	{{form_row(form.userLastName, {'label': 'Nom', 'attr':
+    {'placeholder': 'Nom de l\'utilisateur...'}})}}
+	{{form_row(form.userAddress, {'label': 'Adresse', 'attr':
+    {'placeholder': 'Entrez votre adresse...'}})}}
+	{{form_row(form.userCountry, {'label': 'Pays', 'attr':
+    {'placeholder': 'Entrez votre pays de résidence'}})}}
+	{{form_row(form.userNationality, {'label': 'Nationalité', 'attr':
+    {'placeholder': 'Spécifiez votre Nationalité'}})}}
+	{{form_row(form.userPassportFile, {'label': 'Passeport', 'attr':
+    {'placeholder': 'passeport.jpg'}})}}
+	{{form_row(form.userCurrentLocation, {'label': 'Ville de résidence', 'attr':
+    {'placeholder': 'Entrez le nom de votre ville'}})}}
+	{{form_row(form.userExperience, {'label': 'Expérience', 'attr':
+    {'placeholder': 'Spécifiez votre expérience'}})}}
+	{{form_row(form.userDescription, {'label': 'Profil', 'attr':
+    {'placeholder': 'Décrivez vous en quelques lignes...'}})}}
+	{{form_row(form.userDateOfBirth, {'label': 'Date de naissance', 'attr':
+    {'placeholder': ''}})}}
+	{{form_row(form.userPlaceOfBirth, {'label': 'Lieu de Naissance', 'attr':
+    {'placeholder': 'Spécifiez votre lieu de naissance'}})}}
+	{{form_row(form.userTelephone, {'label': 'Téléphone', 'attr':
+    {'placeholder': 'Entrez votre numéro de téléphone...'}})}}
+	{{form_row(form.userEmail, {'label': 'Votre email', 'attr':
+    {'placeholder': 'Spécifiez votre email...'}})}}
+	{{form_row(form.userPwd, {'label': 'Mot de passe', 'attr':
+    {'placeholder': 'Entrez votre mot de passe'}})}}
+
+	{{form_row(form.userCategory, {'label': 'Secteur recherché', 'attr':
+    {'placeholder': 'Définissez votre secteur professionel'}})}}
+	{{form_row(form.isAdmin, {'label': 'Administrateur'})}}
+	{{form_row(form.addUserNotes, {'label': 'Notes Candidat'})}}
+	{{form_row(form.profileCreatedAt, {'label': 'Création du profil'})}}
+	{{form_row(form.profileUpdatedAt, {'label': 'Mise à jour du profil'})}}
+	{{form_row(form.profileDeletedAt, {'label': 'Profil effacé le '})}}
+	{{form_row(form.userCv, {'label': 'CV', 'attr':
+    {'placeholder': 'CV.pdf'}})}}
+	{{form_row(form.userPp, {'label': 'Photo', 'attr':
+    {'placeholder': 'photo_profil.jpg'}})}}
+	<button type="submit" class="btn btn-success">Inscription !</button>
+	{{form_row(form.getNewPwd, {'label': 'Mot de passe oublié ?', 'attr':
+    {'placeholder': 'Entrez un nouveau mot de passe'}})}}
+	<button type="submit" class="btn btn-success">Recevoir Nouveau mot de passe</button>
+	{{form_end(form)}}
+{% endblock %}
